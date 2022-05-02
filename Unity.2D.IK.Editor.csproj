@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{31b972e9-e746-0ab5-4106-112789faf164}</ProjectGuid>
+    <ProjectGuid>{c538714d-f8f8-1157-95f2-7224e6bc16ed}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.IK.Editor</AssemblyName>
@@ -36,15 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\IKEditorManager.cs" />
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\Inspectors\CCDSolver2DEditor.cs" />
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\Inspectors\IKManager2DEditor.cs" />
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\Inspectors\LimbSolver2DEditor.cs" />
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\IKGizmos.cs" />
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\Inspectors\Solver2DEditor.cs" />
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\AssemblyInfo.cs" />
-     <Compile Include="Packages\com.unity.2d.animation\IK\Editor\Inspectors\FabrikSolver2DEditor.cs" />
-     <None Include="Packages\com.unity.2d.animation\IK\Editor\Unity.2D.IK.Editor.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\IKEditorManager.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\Inspectors\CCDSolver2DEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\Inspectors\IKManager2DEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\Inspectors\LimbSolver2DEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\IKGizmos.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\Inspectors\Solver2DEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\Inspectors\FabrikSolver2DEditor.cs" />
+     <None Include="Library\PackageCache\com.unity.2d.animation@5.1.0\IK\Editor\Unity.2D.IK.Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -283,19 +283,19 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -654,43 +654,43 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{34aa61b5-ddd7-403c-0b54-b8db276e3195}</Project>
+      <Project>{ab836771-250b-6003-0d66-3a5d655b18ee}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{7350b2c5-3413-6c4f-5f2f-6273d96de1fa}</Project>
+      <Project>{8212f5b7-3cc2-8420-113c-0292bac4df8a}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{8c181f34-3cdc-37a6-3304-10c3d568ba9e}</Project>
+      <Project>{b6f233fc-7de5-5204-6751-84757bad4dd4}</Project>
       <Name>Unity.2D.Common.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{2be27a81-4d58-b77d-bc57-75871342abb5}</Project>
+      <Project>{df35b7f8-72a6-0785-f06b-f27e085660ab}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{7562df9d-090e-1bbd-f395-07e113f73fc4}</Project>
+      <Project>{7e9d585c-5536-8a50-b94c-9863a44290b0}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{1e827bc8-2305-0ce8-11fa-a21f9d1bc456}</Project>
+      <Project>{c0a5c3b0-ed87-5de6-6b08-1f6eee142241}</Project>
       <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{5dac8ffb-5961-0031-dd7f-e24e990ffb92}</Project>
+      <Project>{39d29d63-ac9a-cbbd-582c-13b352351470}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{46c0b9a3-b06a-79df-de1f-9858e9cf447b}</Project>
+      <Project>{c98f0aa6-1052-4253-2af6-f9564c69c0cb}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{d0d19078-025f-0897-00f0-b5000823cc43}</Project>
+      <Project>{0b954e5c-82dd-0618-09a9-173319525a76}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{3306e5aa-a609-4dfa-c1c7-9230f14bb374}</Project>
+      <Project>{5e0e939b-c8f8-9292-ad79-e0796820944f}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

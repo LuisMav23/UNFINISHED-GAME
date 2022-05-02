@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7a894437-1edf-4908-6c2c-84d333d496ba}</ProjectGuid>
+    <ProjectGuid>{31b3280b-c173-f2fd-89de-0056c9d104ae}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Mathematics.Editor</AssemblyName>
@@ -36,11 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Packages\com.unity.mathematics\Unity.Mathematics.Editor\PrimitiveVectorDrawer.cs" />
-     <Compile Include="Packages\com.unity.mathematics\Unity.Mathematics.Editor\MatrixDrawer.cs" />
-     <Compile Include="Packages\com.unity.mathematics\Unity.Mathematics.Editor\PostNormalizedVectorDrawer.cs" />
-     <Compile Include="Packages\com.unity.mathematics\Unity.Mathematics.Editor\QuaternionDrawer.cs" />
-     <None Include="Packages\com.unity.mathematics\Unity.Mathematics.Editor\Unity.Mathematics.Editor.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\PrimitiveVectorDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\MatrixDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\PostNormalizedVectorDrawer.cs" />
+     <Compile Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\QuaternionDrawer.cs" />
+     <None Include="Library\PackageCache\com.unity.mathematics@1.1.0\Unity.Mathematics.Editor\Unity.Mathematics.Editor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -279,19 +279,19 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -650,23 +650,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{775c1948-c1ec-e45e-6c39-e37d2a0b12dd}</Project>
+      <Project>{0e8df8f0-8d35-70cd-b6e1-22dc4bebefeb}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{5dac8ffb-5961-0031-dd7f-e24e990ffb92}</Project>
+      <Project>{39d29d63-ac9a-cbbd-582c-13b352351470}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{46c0b9a3-b06a-79df-de1f-9858e9cf447b}</Project>
+      <Project>{c98f0aa6-1052-4253-2af6-f9564c69c0cb}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{d0d19078-025f-0897-00f0-b5000823cc43}</Project>
+      <Project>{0b954e5c-82dd-0618-09a9-173319525a76}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{3306e5aa-a609-4dfa-c1c7-9230f14bb374}</Project>
+      <Project>{5e0e939b-c8f8-9292-ad79-e0796820944f}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

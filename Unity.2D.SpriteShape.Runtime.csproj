@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5a4a60db-2a85-c531-9b5a-db9375697786}</ProjectGuid>
+    <ProjectGuid>{1f194c67-931f-78e3-8cc9-cf53cebf5b35}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.SpriteShape.Runtime</AssemblyName>
@@ -36,26 +36,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\Tess.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\UTess2D\Tessellator.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\SpriteShapeGenerator.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\SplineUtility.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\Dict.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\BezierUtility.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\Spline.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\PriorityHeap.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\SpriteShapeController.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\PriorityQueue.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\UTess2D\ArraySlice.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\SpriteShape.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\Sweep.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\Mesh.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\AssemblyInfo.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\SpriteShapeGeometryCache.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\Geom.cs" />
-     <Compile Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\MeshUtils.cs" />
-     <None Include="Packages\com.unity.2d.spriteshape\Runtime\External\LibTessDotNet\LICENSE.txt" />
-     <None Include="Packages\com.unity.2d.spriteshape\Runtime\Unity.2D.SpriteShape.Runtime.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\Tess.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\UTess2D\Tessellator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\SpriteShapeGenerator.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\SplineUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\Dict.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\BezierUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\Spline.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\PriorityHeap.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\SpriteShapeController.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\PriorityQueue.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\UTess2D\ArraySlice.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\SpriteShape.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\Sweep.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\Mesh.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\SpriteShapeGeometryCache.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\Geom.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\MeshUtils.cs" />
+     <None Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\External\LibTessDotNet\LICENSE.txt" />
+     <None Include="Library\PackageCache\com.unity.2d.spriteshape@5.2.0\Runtime\Unity.2D.SpriteShape.Runtime.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -294,16 +294,16 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:\Users\luis\Unity Projects\Rouge-like Game\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+        <HintPath>C:\Users\luis\Unity Projects\HITMAN-2D\Library\PackageCache\com.unity.collab-proxy@1.15.12\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -659,19 +659,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{2be27a81-4d58-b77d-bc57-75871342abb5}</Project>
+      <Project>{df35b7f8-72a6-0785-f06b-f27e085660ab}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{775c1948-c1ec-e45e-6c39-e37d2a0b12dd}</Project>
+      <Project>{0e8df8f0-8d35-70cd-b6e1-22dc4bebefeb}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{5dac8ffb-5961-0031-dd7f-e24e990ffb92}</Project>
+      <Project>{39d29d63-ac9a-cbbd-582c-13b352351470}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{46c0b9a3-b06a-79df-de1f-9858e9cf447b}</Project>
+      <Project>{c98f0aa6-1052-4253-2af6-f9564c69c0cb}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
