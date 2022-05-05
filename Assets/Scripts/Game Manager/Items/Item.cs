@@ -4,82 +4,111 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private GameObject PlayerHeldItem;
-    [SerializeField] private string DefaultName;
-    [SerializeField] private float dropDistance;
-
-    private string Name;
-    private bool isHeld = false;
-    private bool isInteractable = true;
+    [SerializeField] private GameObject m_PlayerHeldItem;
+    [SerializeField] private Camera m_cam;
+    [SerializeField] private string m_DefaultName;
+    [SerializeField] private Sprite[] m_ItemSprites;
     
-    private Sprite ItemSprite;
-    private Transform itemTransform;
-    private SpriteRenderer spriteRenderer;
-    private ItemManager itemManager;
-    private Collider2D[] colliders;
-    private InteractableField intField;
+    private Sprite m_ItemSprite;
+    private Transform m_itemTransform;
+    private SpriteRenderer m_spriteRenderer;
+    private Collider2D[] m_colliders;
     
+    private string m_Name;
+    private bool m_isHeld = false;
+    private bool m_isInteractable = false;
+    private bool m_isDropping = false;
 
     void Awake() {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        itemTransform = gameObject.GetComponent<Transform>();
-        itemManager = GameObject.Find("Item Manager").GetComponent<ItemManager>();
-        intField = GameObject.Find("Interactable Field").GetComponent<InteractableField>();
-        colliders = gameObject.GetComponents<Collider2D>();
 
-        itemTransform.localScale = new Vector3(6.00f, 6.00f, 1.00f);
+        m_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        m_itemTransform = gameObject.GetComponent<Transform>();
+        m_colliders = gameObject.GetComponents<Collider2D>();
+
+        m_itemTransform.localScale = new Vector3(7.00f, 7.00f, 1.00f);
     }
 
     void Update() {
-        isInteractable = intField.InteractableItems.Contains(this.gameObject);
-        
+
+        m_isInteractable = InteractableField.Instance.InteractableItems.Contains(this.gameObject);
+
+        PickUpItem();
+        DropItem();
     }
 
     private void OnMouseOver() {
-        //Debug.Log(this.gameObject.name + ": Can Pick Up");
-        if (isInteractable){
-            if (Input.GetButtonDown("Fire1") && isHeld == false){
-                isHeld = true;
+
+        if (m_isInteractable){
+            if (Input.GetButtonDown("Fire1") && m_isHeld == false){
+                m_isHeld = true;
             }
         }
     }
 
+
     void setSprite(){
-        foreach(Sprite sprite in this.itemManager.ItemSprites){
-            if (sprite.name == this.Name) {
-                this.ItemSprite = sprite;
-                this.spriteRenderer.sprite = this.ItemSprite;
+        
+        foreach(Sprite sprite in m_ItemSprites){
+            if (sprite.name == this.m_Name) {
+                this.m_ItemSprite = sprite;
+                this.m_spriteRenderer.sprite = this.m_ItemSprite;
             }
         }
     }
 
     void PickUpItem(){
-        if (isHeld == true){
-            this.Name = "Held_" + this.Name;
-            itemTransform.position = PlayerHeldItem.transform.position;
-            itemTransform.rotation = PlayerHeldItem.transform.rotation;
-            itemTransform.parent = PlayerHeldItem.transform;
 
-            foreach(Collider2D col in colliders){
+        if (m_isHeld == true){
+
+            this.m_Name = "Held_" + this.m_Name;
+            m_itemTransform.position = m_PlayerHeldItem.transform.position;
+            m_itemTransform.rotation = m_PlayerHeldItem.transform.rotation;
+            m_itemTransform.parent = m_PlayerHeldItem.transform;
+
+            foreach(Collider2D col in m_colliders){
                 col.enabled = false;
             }
             setSprite();
-               
-            if(Input.GetKeyDown("e")){
-                
-                itemTransform.position = PlayerHeldItem.transform.position + PlayerHeldItem.transform.forward * dropDistance;
-                itemTransform.position -= new Vector3(0.00f, 0.00f, dropDistance);
-                itemTransform.parent = null;
-                isHeld = false;
-
-                foreach(Collider2D col in colliders){
-                    col.enabled = true;
-                }
-            }
         }
-        else if (isHeld == false){
-            this.Name = DefaultName;
+        else if (m_isHeld == false){
+            this.m_Name = m_DefaultName;
             setSprite();
         }
     }
+
+    void DropItem(){
+        var mousePos = m_cam.ScreenToWorldPoint(Input.mousePosition);
+        var HeldItemPos = (Vector2)m_PlayerHeldItem.transform.position;
+        var HeldOffset = HeldItemPos + new Vector2(4.00f, 2.00f);
+
+        if(Input.GetKeyDown(KeyCode.E) && m_isHeld == true){
+            m_isHeld = false;
+            m_isDropping = true;
+        }
+
+        if (m_isDropping){
+            m_itemTransform.parent = null;
+            m_itemTransform.position = Vector2.Lerp(m_itemTransform.position, HeldOffset, 3 * Time.deltaTime);
+    
+            if (Input.GetButtonDown("Fire1")){
+
+                if (InteractableField.Instance.isMouseOnField){
+                    m_isDropping = false;
+                    m_itemTransform.position = (Vector2)mousePos;
+
+                    foreach(Collider2D col in m_colliders){
+                        col.enabled = true;
+                    }
+                }   
+                else if (!InteractableField.Instance.isMouseOnField) {
+                    Debug.Log("Unable to drop");
+                }
+            }
+            else if (Input.GetButtonDown("Fire2")){
+                m_isHeld = true;
+                m_isDropping = false;
+            }
+        }
+    }
 }
+
