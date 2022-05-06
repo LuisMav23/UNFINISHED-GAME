@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Aim : MonoBehaviour
 {
-    [SerializeField] public Camera cam;
     
     private Rigidbody2D playerRB;
     private Rigidbody2D rb;
@@ -16,10 +15,10 @@ public class Aim : MonoBehaviour
     }
     
     void Update() {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         rb.position = playerRB.position;
     }
-
+    
     void FixedUpdate() {
         Vector2 lookDir = mousePos - rb.position;
         float lookAngle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;

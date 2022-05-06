@@ -4,47 +4,57 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private GameObject m_PlayerHeldItem;
-    [SerializeField] private Camera m_cam;
     [SerializeField] private string m_DefaultName;
     [SerializeField] private Sprite[] m_ItemSprites;
     
+    private GameObject m_Player;
     private Sprite m_ItemSprite;
-    private Transform m_itemTransform;
     private SpriteRenderer m_spriteRenderer;
     private Collider2D[] m_colliders;
     
     private string m_Name;
-    private bool m_isHeld = false;
-    private bool m_isInteractable = false;
-    private bool m_isDropping = false;
+    public bool m_isStored = false;
+    public bool m_isHeld = false;
+    public bool m_isInteractable = false;
+    public bool m_isMouseOver = false;
+    public bool m_isDropping = false;
 
     void Awake() {
 
+        m_Player = GameObject.FindGameObjectWithTag("Player");
         m_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        m_itemTransform = gameObject.GetComponent<Transform>();
         m_colliders = gameObject.GetComponents<Collider2D>();
 
-        m_itemTransform.localScale = new Vector3(7.00f, 7.00f, 1.00f);
+        gameObject.transform.localScale = new Vector3(7.00f, 7.00f, 1.00f);
     }
 
     void Update() {
 
         m_isInteractable = InteractableField.Instance.InteractableItems.Contains(this.gameObject);
 
-        PickUpItem();
-        DropItem();
+        if (PlayerData.InventoryContains(gameObject)){
+            m_isStored = true;
+        }
+        else{
+            m_isStored = false;
+        }
+
+        ManageProperty();
     }
 
-    private void OnMouseOver() {
-
-        if (m_isInteractable){
-            if (Input.GetButtonDown("Fire1") && m_isHeld == false){
-                m_isHeld = true;
+    private void OnTriggerStay2D(Collider2D other) {
+        if(other.gameObject.tag == "Mouse"){
+            if (m_isInteractable){
+                m_isMouseOver = true;
             }
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.gameObject.tag == "Mouse"){
+            m_isMouseOver = false;
+        }
+    }
 
     void setSprite(){
         
@@ -56,58 +66,42 @@ public class Item : MonoBehaviour
         }
     }
 
-    void PickUpItem(){
+    void ManageProperty(){
 
-        if (m_isHeld == true){
-
-            this.m_Name = "Held_" + this.m_Name;
-            m_itemTransform.position = m_PlayerHeldItem.transform.position;
-            m_itemTransform.rotation = m_PlayerHeldItem.transform.rotation;
-            m_itemTransform.parent = m_PlayerHeldItem.transform;
-
+        if (m_isHeld && m_isStored){
+            
             foreach(Collider2D col in m_colliders){
                 col.enabled = false;
             }
             setSprite();
         }
-        else if (m_isHeld == false){
+        else if (!m_isHeld && !m_isStored){
             this.m_Name = m_DefaultName;
+            foreach(Collider2D col in m_colliders){
+                col.enabled = true;
+            }
             setSprite();
-        }
-    }
-
-    void DropItem(){
-        var mousePos = m_cam.ScreenToWorldPoint(Input.mousePosition);
-        var HeldItemPos = (Vector2)m_PlayerHeldItem.transform.position;
-        var HeldOffset = HeldItemPos + new Vector2(4.00f, 2.00f);
-
-        if(Input.GetKeyDown(KeyCode.E) && m_isHeld == true){
-            m_isHeld = false;
-            m_isDropping = true;
         }
 
         if (m_isDropping){
-            m_itemTransform.parent = null;
-            m_itemTransform.position = Vector2.Lerp(m_itemTransform.position, HeldOffset, 3 * Time.deltaTime);
-    
-            if (Input.GetButtonDown("Fire1")){
-
-                if (InteractableField.Instance.isMouseOnField){
-                    m_isDropping = false;
-                    m_itemTransform.position = (Vector2)mousePos;
-
-                    foreach(Collider2D col in m_colliders){
-                        col.enabled = true;
-                    }
-                }   
-                else if (!InteractableField.Instance.isMouseOnField) {
-                    Debug.Log("Unable to drop");
-                }
+            gameObject.GetComponent<Rigidbody2D>().rotation += 180.00f * Time.deltaTime;
+            if (gameObject.GetComponent<Rigidbody2D>().rotation >= 360.00f){
+                gameObject.GetComponent<Rigidbody2D>().rotation = 0;
             }
-            else if (Input.GetButtonDown("Fire2")){
-                m_isHeld = true;
-                m_isDropping = false;
-            }
+        }
+
+        if (m_isStored && !m_isHeld && !m_isDropping){
+            
+            gameObject.transform.position = m_Player.transform.position;
+            gameObject.transform.parent = m_Player.transform;
+            m_spriteRenderer.sprite = null;
+        }
+
+        if(m_Player.GetComponent<PlayerBehaviour>().getHeldItem() == gameObject){
+            m_isHeld = true;
+        }
+        else{
+            m_isHeld = false;
         }
     }
 }

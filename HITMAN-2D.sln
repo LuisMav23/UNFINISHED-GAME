@@ -21,9 +21,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.IK.Runtime", "Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.SpriteShape.Runtime", "Unity.2D.SpriteShape.Runtime.csproj", "{1f194c67-931f-78e3-8cc9-cf53cebf5b35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.PixelPerfect", "Unity.2D.PixelPerfect.csproj", "{f8a08b2f-4292-136a-303d-7981baffbe88}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{16970f45-f6cc-8291-3a54-224a5ff33635}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.PixelPerfect", "Unity.2D.PixelPerfect.csproj", "{f8a08b2f-4292-136a-303d-7981baffbe88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Common.Runtime", "Unity.2D.Common.Runtime.csproj", "{df35b7f8-72a6-0785-f06b-f27e085660ab}"
 EndProject
@@ -100,10 +100,10 @@ Global
 		{7e9d585c-5536-8a50-b94c-9863a44290b0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1f194c67-931f-78e3-8cc9-cf53cebf5b35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1f194c67-931f-78e3-8cc9-cf53cebf5b35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{f8a08b2f-4292-136a-303d-7981baffbe88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{f8a08b2f-4292-136a-303d-7981baffbe88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16970f45-f6cc-8291-3a54-224a5ff33635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{16970f45-f6cc-8291-3a54-224a5ff33635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f8a08b2f-4292-136a-303d-7981baffbe88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f8a08b2f-4292-136a-303d-7981baffbe88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{df35b7f8-72a6-0785-f06b-f27e085660ab}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{df35b7f8-72a6-0785-f06b-f27e085660ab}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8212f5b7-3cc2-8420-113c-0292bac4df8a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

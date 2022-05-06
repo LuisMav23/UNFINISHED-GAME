@@ -36,13 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Player Scripts\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Game Manager\Items\Item.cs" />
-     <Compile Include="Assets\Scripts\Player Scripts\CameraBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Scene Manager\CameraBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Game Manager\Items\GoldenGun.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\Aim.cs" />
-     <Compile Include="Assets\Scripts\Game Manager\ItemManager.cs" />
-     <Compile Include="Assets\Scripts\Player Scripts\SmoothCamera.cs" />
-     <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\InteractableField.cs" />
+     <Compile Include="Assets\Scripts\Scene Manager\SmoothCamera.cs" />
+     <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Scene Manager\Mouse.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2020.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
